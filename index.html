@@ -33,7 +33,7 @@
                         <a class="nav-link " aria-current="page" href="#presentation">A propos de l'abonnement</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#avis">Avis</a>
+                        <a class="nav-link" href="#Organigramme">Organigramme</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -52,7 +52,7 @@
     <section id="presentation">
         <div class="container">
             <div class="position-relative">
-            <div class="toast show position-absolute top-0 start-100 translate-middle  " role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast show  fixed-bottom" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <strong class="me-auto">MA VIDEO EDITOR</strong>
                     <small>A l'instant</small>
@@ -63,7 +63,7 @@
                 <div class="toast-body">
                     <a href="#tarifs"><div class="spinner-border spinner-border-sm me-2" role="status">
                         <span class="visually-hidden">Loading...</span>
-                    </div>Une offre est limité jusqu'à la fin de semaine !</a>
+                    </div>Une offre est limitée jusqu'à la fin de semaine !</a>
                 </div>
             </div>
             </div>
@@ -72,7 +72,7 @@
                     <h1 class="">MA VIDEO EDITOR</h1>
                     <h2 class="pt-2">MA VIDEO EDITOR, seulement si vous voulez ce qu’il y a de mieux</h2>
                     <p class="pt-3 pb-2">MA VIDEO EDITOR est un logicel de montage photos et vidéos. Ce logiciel comprend une partie pour la retouche photo, une partie pour le montage vidéo et une partie pour réaliser des effets spéciaux. </p>
-                    <button type="button" class="btn btn-outline-primary pt">Acheter maintenant</button>
+                    <a href="#tarifs"><button type="button" class="btn btn-outline-primary pt">Acheter maintenant</button></a>
                 </div>
                 <div class="col-md-6 col-xl-6 float-end ">
                     <img src="./assets/images/Schiesslé-Andy-SIO1-SLAM_logo-entreprise-removebg-preview.png" class="d-md-block d-none w-50" alt="..." >
@@ -95,7 +95,78 @@
                             <p class="card-text"></p>
                             <h1 class="text-primary">9.99€</h1>
                             <p class="d-lg-block d-none">Ayez accès au logiciel complet pour 9.99€ par mois</p>
-                            <a href="#" class="btn btn-outline-primary">Acheter</a>
+                                <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#planMensuelle" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Acheter
+                                </a>
+                            <div class="collapse" id="planMensuelle">
+                                <form class="row g-3">
+                                    <div class="col-md-12">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Adresse</label>
+                                        <input type="text" class="form-control" id="inputAdresse" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Ville</label>
+                                        <input type="text" class="form-control" id="inputVille">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Région</label>
+                                        <input type="text" class="form-control" id="inputRegion">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Numéro de carte</label>
+                                        <input type="text" class="form-control" id="inputNumCarte">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Date de péremption</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 pt-2">
+                                        <label for="inputState" class="form-label"></label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                            <option>2028</option>
+                                            <option>2029</option>
+                                            <option>2030</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Cryptogramme</label>
+                                        <input type="text" class="form-control" id="inputCryptogramme">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Vous acceptez les conditions d'utilisation
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Payer</button>
+                                    </div>
+                                </form>
+                            </div>
 
                         </div>
                     </div>
@@ -107,22 +178,168 @@
                             <p class="card-text"></p>
                             <h1 class="text-primary"> <span class="text-decoration-line-through">99.99€</span>49.99€</h1>
                             <p class="d-lg-block d-none">Ayez accès au logiciel complet pour 99.99€ par an</p>
-                            <a href="#" class="btn btn-outline-primary">Acheter</a>
+                            <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#planAnnuelle" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Acheter
+                            </a>
+                            <div class="collapse" id="planAnnuelle">
+                                <form class="row g-3">
+                                    <div class="col-md-12">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Adresse</label>
+                                        <input type="text" class="form-control" id="inputAdresse" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Ville</label>
+                                        <input type="text" class="form-control" id="inputVille">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Région</label>
+                                        <input type="text" class="form-control" id="inputRegion">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Numéro de carte</label>
+                                        <input type="text" class="form-control" id="inputNumCarte">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Date de péremption</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 pt-2">
+                                        <label for="inputState" class="form-label"></label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                            <option>2028</option>
+                                            <option>2029</option>
+                                            <option>2030</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Cryptogramme</label>
+                                        <input type="text" class="form-control" id="inputCryptogramme">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Vous acceptez les conditions d'utilisation
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Payer</button>
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
-
                 </div>
-                <div class="col-lg-4 col-xl-4 p-0 my-auto h-75 ">
+                <div class="col-lg-4 col-xl-4 p-0   ">
                     <div class="card text-lg-start ">
                         <div class="card-body">
                             <h5 class="card-title">Plan perpétuelle </h5>
                             <p class="card-text"></p>
                             <h1 class="text-primary">149.99€</h1>
                             <p class="d-lg-block d-none">Ayes accès au logiciel complet à vie pour 149.99€  </p>
-                            <a href="#" class="btn btn-outline-primary  ">Acheter</a>
+                            <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#planPerpetuelle" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Acheter
+                            </a>
+                            <div class="collapse" id="planPerpetuelle">
+                                <form class="row g-3">
+                                    <div class="col-md-12">
+                                        <label for="inputEmail4" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Adresse</label>
+                                        <input type="text" class="form-control" id="inputAdresse" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Ville</label>
+                                        <input type="text" class="form-control" id="inputVille">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Région</label>
+                                        <input type="text" class="form-control" id="inputRegion">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Numéro de carte</label>
+                                        <input type="text" class="form-control" id="inputNumCarte">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputState" class="form-label">Date de péremption</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 pt-2">
+                                        <label for="inputState" class="form-label"></label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                            <option>2028</option>
+                                            <option>2029</option>
+                                            <option>2030</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="inputCity" class="form-label">Cryptogramme</label>
+                                        <input type="text" class="form-control" id="inputCryptogramme">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Vous acceptez les conditions d'utilisation
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Payer</button>
+                                    </div>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
+                </div>
+
     </section>
+
     <!--    contenu-->
     <section id="contenu">
         <h1 class="text-center">Que propose le logiciel</h1>
@@ -211,73 +428,30 @@
                 </div>
     </section>
     <!--    Organigramme-->
-    <section id="Organigramme" class="bg-light">
-        <style>
-            .right-line {
-                border-right: 5px #ccc solid;
-                height:2em
-            }
+    <section id="Organigramme" class="bg-light text-center" >
+        <h1>Organigramme de la société </h1>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Fiche de poste
+            </a>
 
-            .top-line {
-                border-top: 5px #ccc solid;
-            }
-
-            .halved {
-                width: 50%;
-                float:left;
-            }
-        </style>
-
-        <div class="container position-relative  bg-light">
-            <div class="row">
-                <div class="cen"><div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div></div>
-            </div>
-            <div class="row">
-                <div class="col-6 right-line"></div>
-                <div class="col-6"></div>
-            </div>
-            <div class="row">
-                <div class="col-3 right-line"></div>
-                <div class="col-3 right-line top-line"></div>
-                <div class="col-3 right-line top-line"></div>
-                <div class="col-3"></div>
-            </div>
-            <div class="row">
-                <div class="col-4"><div class="card text-white bg-primary start-0" style="max-width: 20rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div></div>
-                <div class="col-4"><div class="card text-white bg-primary  " style="max-width: 20rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div></div>
-                <div class="col-4"><div class="card text-white bg-primary " style="max-width: 20rem;">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div></div>
-
-
-            </div>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Luigi Daniel</a></li>
+                <li><a class="dropdown-item" href="#">Alban Parizot</a></li>
+                <li><a class="dropdown-item" href="#">Cécile Alteriet</a></li>
+                <li><a class="dropdown-item" href="#">Marie Dupont</a></li>
+            </ul>
         </div>
+        <img src="./assets/images/organigramme.png"  class="w-75" alt="">
+    </section>
+
+    <!-- Fiche employé -->
+    <section>
+
     </section>
 
 </main>
-<footer class="bg-dark">
+<footer class="bg-dark" id="contact">
     <p>Contact :</p>
     <p> numéro de téléphone :06 43 21 33 38</p>
     <p>adresse mail : mavideoeditor@gmail.com</p>
