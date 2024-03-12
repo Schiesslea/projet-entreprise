@@ -77,22 +77,24 @@ ul {
     height: 100%;
 }
 
-.example-2 .icon-content a[data-social="spotify"] .filled,
-.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
-    background-color: #1db954;
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background-color: deeppink;
 }
 
-.example-2 .icon-content a[data-social="pinterest"] .filled,
-.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
-    background-color: #bd081c;
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: red;
 }
 
-.example-2 .icon-content a[data-social="dribbble"] .filled,
-.example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
-    background-color: #ea4c89;
+.example-2 .icon-content a[data-social="x"] .filled,
+.example-2 .icon-content a[data-social="x"] ~ .tooltip {
+    background-color: black;
 }
 
-.example-2 .icon-content a[data-social="telegram"] .filled,
-.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
-    background-color: #0088cc;
+.example-2 .icon-content a[data-social="tiktok"] .filled,
+.example-2 .icon-content a[data-social="tiktok"] ~ .tooltip {
+    background-color: black;
 }
+
+/* fond formulaire */
