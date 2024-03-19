@@ -21,7 +21,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-expand-md bg-light" data-bs-theme="light">
         <div class="container-fluid ">
-            <a class="navbar-brand " href="https://www.youtube.com/"><img src="./assets/images/Schiesslé-Andy-SIO1-SLAM_logo-entreprise-removebg-preview.png" alt="" height="100">MA VIDEO EDITOR</a>
+            <a class="navbar-brand " href="index.html"><img src="./assets/images/Schiesslé-Andy-SIO1-SLAM_logo-entreprise-removebg-preview.png" alt="" height="100">MA VIDEO EDITOR</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -94,8 +94,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Plan mensuelle </h5>
                             <p class="card-text"></p>
-                            <h1 class="text-primary">9.99€</h1>
-                            <p class="d-lg-block d-none">Ayez accès au logiciel complet pour 9.99€ par mois</p>
+                            <h1 class="text-primary">9.99€/mois</h1>
+                            <p class="d-lg-block d-none">Ayez accès au logiciel complet pour le mois</p>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                 Acheter
@@ -112,24 +112,24 @@
                                         <div class="modal-body">
                                             <form class="row g-3">
                                                 <div class="col-md-12">
-                                                    <label for="inputEmail4" class="form-label">Email</label>
+                                                    <label for="inputEmail" class="form-label">Email</label>
                                                     <input type="email" class="form-control" id="inputEmail">
                                                 </div>
 
                                                 <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Adresse</label>
+                                                    <label for="inputAdresse" class="form-label">Adresse</label>
                                                     <input type="text" class="form-control" id="inputAdresse" placeholder="1234 Main St">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Ville</label>
+                                                    <label for="inputVille" class="form-label">Ville</label>
                                                     <input type="text" class="form-control" id="inputVille">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Région</label>
+                                                    <label for="inputRegion" class="form-label">Région</label>
                                                     <input type="text" class="form-control" id="inputRegion">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Numéro de carte</label>
+                                                    <label for="inputNumCarte" class="form-label">Numéro de carte</label>
                                                     <input type="number" class="form-control" id="inputNumCarte">
                                                 </div>
                                                 <div class="col-md-6">
@@ -162,7 +162,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Cryptogramme</label>
+                                                    <label for="inputCryptogramme" class="form-label">Cryptogramme</label>
                                                     <input type="number" class="form-control" id="inputCryptogramme">
                                                 </div>
                                                 <div class="col-12">
@@ -177,7 +177,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fermer</button>
-                                            <button type="button" class="btn btn-outline-success">Payer</button>
+                                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Payer</button>
                                         </div>
                                     </div>
                                 </div>
@@ -193,10 +193,12 @@
                 <div class="col-lg-4  col-xl-4 p-0 ">
                     <div class="card border-primary text-lg-start   ">
                         <div class="card-body">
-                            <h5 class="card-title">Plan annuelle</h5>
-                            <p class="card-text"></p>
-                            <h1 class="text-primary"> <span class="text-decoration-line-through">99.99€</span>49.99€</h1>
-                            <p class="d-lg-block d-none">Ayez accès au logiciel complet pour 99.99€ par an</p>
+                            <h5 class="card-title"> <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><style>@keyframes rotate{0%{transform:rotate(0)}to{transform:rotate(360deg)}}</style><rect width="16" height="16" x="4" y="4" stroke="#0A0A30" stroke-width="1.5" rx="8"/><path stroke="#0A0A30" stroke-linecap="round" stroke-width="1.5" d="M12.021 12l2.325 2.325"/><path stroke="#265BFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12.021 12V6.84" style="animation:rotate 2s linear infinite both;transform-origin:center"/></svg>Plan annuelle</h5>
+                            <p class="card-text rainbowText">
+                                Offre limité
+                            </p>
+                            <h1 class="text-primary"> <span class="text-decoration-line-through">99.99€</span>49.99€/an</h1>
+                            <p class="d-lg-block d-none">Ayez accès au logiciel complet pour l'année</p>
                             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                                 Acheter
                             </button>
@@ -210,24 +212,24 @@
                                         <div class="modal-body">
                                             <form class="row g-3">
                                                 <div class="col-md-12">
-                                                    <label for="inputEmail4" class="form-label">Email</label>
+                                                    <label for="inputEmail" class="form-label">Email</label>
                                                     <input type="email" class="form-control" id="inputEmail">
                                                 </div>
 
                                                 <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Adresse</label>
+                                                    <label for="inputAdresse" class="form-label">Adresse</label>
                                                     <input type="text" class="form-control" id="inputAdresse" placeholder="1234 Main St">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Ville</label>
+                                                    <label for="inputVille" class="form-label">Ville</label>
                                                     <input type="text" class="form-control" id="inputVille">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Région</label>
+                                                    <label for="inputRegion" class="form-label">Région</label>
                                                     <input type="text" class="form-control" id="inputRegion">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Numéro de carte</label>
+                                                    <label for="inputNumCarte" class="form-label">Numéro de carte</label>
                                                     <input type="number" class="form-control" id="inputNumCarte">
                                                 </div>
                                                 <div class="col-md-6">
@@ -260,7 +262,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Cryptogramme</label>
+                                                    <label for="inputCryptogramme" class="form-label">Cryptogramme</label>
                                                     <input type="number" class="form-control" id="inputCryptogramme">
                                                 </div>
                                                 <div class="col-12">
@@ -275,7 +277,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fermer</button>
-                                            <button type="button" class="btn btn-outline-success">Payer</button>
+                                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Payer</button>
                                         </div>
                                     </div>
                                 </div>
@@ -292,7 +294,7 @@
                             <h5 class="card-title">Plan perpétuelle </h5>
                             <p class="card-text"></p>
                             <h1 class="text-primary">149.99€</h1>
-                            <p class="d-lg-block d-none">Ayes accès au logiciel complet à vie pour 149.99€  </p>
+                            <p class="d-lg-block d-none">Ayes accès au logiciel complet à vie </p>
                             <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
                                 Acheter
                             </button>
@@ -306,24 +308,24 @@
                                         <div class="modal-body">
                                             <form class="row g-3">
                                                 <div class="col-md-12">
-                                                    <label for="inputEmail4" class="form-label">Email</label>
+                                                    <label for="inputEmail" class="form-label">Email</label>
                                                     <input type="email" class="form-control" id="inputEmail">
                                                 </div>
 
                                                 <div class="col-12">
-                                                    <label for="inputAddress" class="form-label">Adresse</label>
+                                                    <label for="inputAdresse" class="form-label">Adresse</label>
                                                     <input type="text" class="form-control" id="inputAdresse" placeholder="1234 Main St">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Ville</label>
+                                                    <label for="inputVille" class="form-label">Ville</label>
                                                     <input type="text" class="form-control" id="inputVille">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Région</label>
+                                                    <label for="inputRegion" class="form-label">Région</label>
                                                     <input type="text" class="form-control" id="inputRegion">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Numéro de carte</label>
+                                                    <label for="inputNumCarte" class="form-label">Numéro de carte</label>
                                                     <input type="number" class="form-control" id="inputNumCarte">
                                                 </div>
                                                 <div class="col-md-6">
@@ -356,7 +358,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="inputCity" class="form-label">Cryptogramme</label>
+                                                    <label for="inputCryptogramme" class="form-label">Cryptogramme</label>
                                                     <input type="number" class="form-control" id="inputCryptogramme">
                                                 </div>
                                                 <div class="col-12">
@@ -371,7 +373,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fermer</button>
-                                            <button type="button" class="btn btn-outline-success">Payer</button>
+                                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Payer</button>
                                         </div>
                                     </div>
                                 </div>
@@ -481,7 +483,7 @@
             <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" role="tab" tabindex="-1">Fiche de poste</a>
         </li>
     </ul>
-        <div id="myTabContent" class="tab-content">
+        <div id="myTabContent" class="tab-content ">
             <div class="tab-pane fade active show" id="home" role="tabpanel">
                 <section id="Organigramme" class="bg-light text-center" >
                     <h1>Organigramme de la société </h1>
@@ -489,8 +491,8 @@
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel">
                 <!-- Mettre fiche de poste ici -->
-                <div id="carouselExampleCaptions" class="carousel carousel-dark w-75 mx-auto slide">
-                    <div class="carousel-indicators">
+                <div id="carouselExampleCaptions" class="carousel carousel-dark w-75 mx-auto slide ">
+                    <div class="carousel-indicators ">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -500,7 +502,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="./assets/images/luigi-daniel.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-block">
                                 <a href="./fiche_de_poste/luigi_daniel.pdf" target="_blank" class="btn btn-outline-info  ">Fiche de poste de Luigi Daniel</a>
                             </div>
                         </div>
@@ -545,10 +547,10 @@
                 <div class="col-6 col-md-3 mb-3">
                     <h5 >Redirection</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#presentation" class="nav-link p-0 text-muted"><i class="bi bi-arrow-right-square me-2"></i>A propos</a></li>
-                        <li class="nav-item mb-2"><a href="#tarifs" class="nav-link p-0 text-muted"><i class="bi bi-arrow-right-square me-2"></i>Tarifs</a></li>
-                        <li class="nav-item mb-2"><a href="#contenu" class="nav-link p-0 text-muted"><i class="bi bi-arrow-right-square me-2"></i>Fonctionnalité</a></li>
-                        <li class="nav-item mb-2"><a href="#Organigramme" class="nav-link p-0 text-muted"><i class="bi bi-arrow-right-square me-2"></i>Organigramme</a></li>
+                        <li class="nav-item mb-2"><a href="#presentation" class="nav-link p-0 text-muted"> <i class="bi bi-arrow-right-circle"></i>A propos</a></li>
+                        <li class="nav-item mb-2"><a href="#tarifs" class="nav-link p-0 text-muted"> <i class="bi bi-arrow-right-circle"></i>Tarifs</a></li>
+                        <li class="nav-item mb-2"><a href="#contenu" class="nav-link p-0 text-muted"> <i class="bi bi-arrow-right-circle"></i>Fonctionnalité</a></li>
+                        <li class="nav-item mb-2"><a href="#Organigramme" class="nav-link p-0 text-muted"> <i class="bi bi-arrow-right-circle"></i>Organigramme</a></li>
                     </ul>
                 </div>
 

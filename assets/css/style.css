@@ -97,4 +97,28 @@ ul {
     background-color: black;
 }
 
-/* fond formulaire */
+.rainbowText {
+    font-size: 15px;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 75s linear infinite;
+}
+
+@keyframes move {
+    to {
+        background-position: 4500vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .rainbowText {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .rainbowText {
+        font-size: 1rem;
+    }
+}
