@@ -1,3 +1,4 @@
+/* icon animé pour pied de page */
 ul {
     list-style: none;
 }
@@ -97,9 +98,10 @@ ul {
     background-color: black;
 }
 
+/* texte rainbow */
 .rainbowText {
     font-size: 15px;
-    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-image: linear-gradient(to right, darkblue, blueviolet, blue, cornflowerblue, deepskyblue, lightblue, lightcyan);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: move 75s linear infinite;
@@ -122,3 +124,20 @@ ul {
         font-size: 1rem;
     }
 }
+
+/* scrollbar */
+#style-3::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+
