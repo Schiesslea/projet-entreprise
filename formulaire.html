@@ -93,7 +93,20 @@
                     <h5>Localisation</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2 text-muted"><i class="bi bi-geo-alt me-2"></i>France</li>
-                        <li class="nav-item mb-2 text-muted"><i class="bi bi-pin-map me-2"></i>La Résie Saint Martin</li>
+                        <li class="nav-item mb-2 text-muted"><a href="" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#map"><i class="bi bi-pin-map me-2"></i>La Résie Saint Martin</a></li>
+                        <div class="modal fade" id="map" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="map" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Lieu de l'entreprise</h1>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2705.0612826234546!2d5.604344076634423!3d47.31314130819598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792a9fde9654aad%3A0x90c883f915fe646b!2s37%20Rue%20de%20l&#39;%C3%89tang%2C%2070140%20La%20R%C3%A9sie-Saint-Martin!5e0!3m2!1sfr!2sfr!4v1711445619148!5m2!1sfr!2sfr" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="container-md"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </ul>
                 </div>
 
