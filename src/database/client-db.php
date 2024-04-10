@@ -30,5 +30,13 @@ function postClient($nom_client, $prenom_client, $adresse_client, $ville_client,
     $requete->execute();
 }
 
+function getMdp($email_client): array|bool
+{
+    $pdo = getConnexion();
+    $requete_mdp = $pdo->prepare("SELECT mdp_client FROM client WHERE email_client=?");
+    $requete_mdp->execute([$email_client]);
+    $mdp = $requete_mdp->fetch(PDO::FETCH_ASSOC);
+    return $mdp;
+}
 
 ?>

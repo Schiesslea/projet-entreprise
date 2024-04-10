@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Création d'un compte</title>
-    <link rel="shortcut icon" href="/public/assets/images/film.svg">
+    <link rel="shortcut icon" href="assets/images/Schiesslé-Andy-SIO1-SLAM_logo-entreprise-removebg-preview.png">
 
 </head>
 <body id="style-3">
@@ -143,126 +143,125 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
                     <p class="form-text text-danger"><?= $erreurs['prenom_client'] ?></p>
                 <?php endif; ?>
             </div>
-            <div class="mb-3>
-                <label for=" adresse_client
-            " class="form-label">Adresse*</label>
-            <input type="text"
-                   class="form-control <?= (isset($erreurs['adresse_client'])) ? "border border-2 border-danger" : "" ?>"
-                   id="adresse_client" name="adresse_client" value="<?= $adresse_client ?>"
-                   placeholder="Saisir votre adresse"
-                   aria-describedby="emailHelp">
-            <?php if (isset($erreurs['adresse_client'])) : ?>
-                <p class="form-text text-danger"><?= $erreurs['adresse_client'] ?></p>
-            <?php endif; ?>
-    </div>
-    <div class="mb-3">
-        <label for="ville_client" class="form-label">Ville*</label>
-        <input type="text"
-               class="form-control <?= (isset($erreurs['ville_client'])) ? "border border-2 border-danger" : "" ?>"
-               id="ville_client" name="ville_client" value="<?= $ville_client ?>"
-               placeholder="Saisir votre ville"
-               aria-describedby="emailHelp">
-        <?php if (isset($erreurs['ville_client'])) : ?>
-            <p class="form-text text-danger"><?= $erreurs['ville_client'] ?></p>
-        <?php endif; ?>
-    </div>
-    <div class="mb-3">
-        <label for="codepostal_client" class="form-label">Code Postal*</label>
-        <input type="number"
-               class="form-control <?= (isset($erreurs['codepostal_client'])) ? "border border-2 border-danger" : "" ?>"
-               id="codepostal_client" name="codepostal_client" value="<?= $codepostal_client ?>"
-               placeholder="Saisir votre code postal"
-               aria-describedby="emailHelp">
-        <?php if (isset($erreurs['codepostal_client'])) : ?>
-            <p class="form-text text-danger"><?= $erreurs['codepostal_client'] ?></p>
-        <?php endif; ?>
-    </div>
-    <div class="mb-3">
-        <label for="pseudo_client" class="form-label">Pseudo*</label>
-        <input type="text"
-               class="form-control <?= (isset($erreurs['pseudo_client'])) ? "border border-2 border-danger" : "" ?>"
-               id="pseudo_client" name="pseudo_client" value="<?= $pseudo_client ?>"
-               placeholder="Saisir votre pseudo"
-               aria-describedby="emailHelp">
-        <?php if (isset($erreurs['pseudo_client'])) : ?>
-            <p class="form-text text-danger"><?= $erreurs['pseudo_client'] ?></p>
-        <?php endif; ?>
-    </div>
-    <div class="mb-3">
-        <label for="email_client" class="form-label">Email*</label>
-        <input type="email"
-               class="form-control <?= (isset($erreurs['email_client'])) ? "border border-2 border-danger" : "" ?>"
-               id="email_client"
-               name="email_client" value="<?= $email_client ?>" placeholder="Saisir votre email"
-               aria-describedby="emailHelp">
-        <?php if (isset($erreurs['email_client'])) : ?>
-            <p class="form-text text-danger"><?= $erreurs['email_client'] ?></p>
-        <?php endif; ?>
-    </div>
-    <div class="mb-3">
-        <label for="mdp_client" class="form-label">Mot de passe*
-            <button type="button" class="btn   " data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                <i class="bi bi-info-circle"></i>
-            </button>
+            <div class="mb-3">
+                <label for="adresse_client" class="form-label">Adresse*</label>
+                <input type="text"
+                       class="form-control <?= (isset($erreurs['adresse_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="adresse_client" name="adresse_client" value="<?= $adresse_client ?>"
+                       placeholder="Saisir votre adresse"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['adresse_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['adresse_client'] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="ville_client" class="form-label">Ville*</label>
+                <input type="text"
+                       class="form-control <?= (isset($erreurs['ville_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="ville_client" name="ville_client" value="<?= $ville_client ?>"
+                       placeholder="Saisir votre ville"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['ville_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['ville_client'] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="codepostal_client" class="form-label">Code Postal*</label>
+                <input type="number"
+                       class="form-control <?= (isset($erreurs['codepostal_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="codepostal_client" name="codepostal_client" value="<?= $codepostal_client ?>"
+                       placeholder="Saisir votre code postal"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['codepostal_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['codepostal_client'] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="pseudo_client" class="form-label">Pseudo*</label>
+                <input type="text"
+                       class="form-control <?= (isset($erreurs['pseudo_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="pseudo_client" name="pseudo_client" value="<?= $pseudo_client ?>"
+                       placeholder="Saisir votre pseudo"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['pseudo_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['pseudo_client'] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="email_client" class="form-label">Email*</label>
+                <input type="email"
+                       class="form-control <?= (isset($erreurs['email_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="email_client"
+                       name="email_client" value="<?= $email_client ?>" placeholder="Saisir votre email"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['email_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['email_client'] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="mdp_client" class="form-label">Mot de passe*
+                    <button type="button" class="btn   " data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        <i class="bi bi-info-circle"></i>
+                    </button>
 
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Les caractéristiques de votre
-                                mot de passe </h1>
-                            <button type="button" class="btn-close " data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <ul>
-                                <li>
-                                    Votre mot de passe doit contenir entre 8 et 14 caractères
-                                </li>
-                                <li>
-                                    Il doit contenir au moins une minuscule, une majuscule, un caractère spécial
-                                    et un chiffre
-                                </li>
-                            </ul>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Les caractéristiques de votre
+                                        mot de passe </h1>
+                                    <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul>
+                                        <li>
+                                            Votre mot de passe doit contenir entre 8 et 14 caractères
+                                        </li>
+                                        <li>
+                                            Il doit contenir au moins une minuscule, une majuscule, un caractère spécial
+                                            et un chiffre
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </label>
+                <input type="password"
+                       class="form-control <?= (isset($erreurs['mdp_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="mdp_client" name="mdp_client"
+                       value="<?= (!empty($erreurs)) ? $mdp_client : "" ?>" placeholder="Saisir votre mot de passe"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['mdp_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['mdp_client'] ?></p>
+                <?php endif; ?>
+                <p></p>
             </div>
-        </label>
-        <input type="password"
-               class="form-control <?= (isset($erreurs['mdp_client'])) ? "border border-2 border-danger" : "" ?>"
-               id="mdp_client" name="mdp_client"
-               value="<?= (!empty($erreurs)) ? $mdp_client : "" ?>" placeholder="Saisir votre mot de passe"
-               aria-describedby="emailHelp">
-        <?php if (isset($erreurs['mdp_client'])) : ?>
-            <p class="form-text text-danger"><?= $erreurs['mdp_client'] ?></p>
-        <?php endif; ?>
-        <p></p>
+            <div class="mb-3">
+                <label for="confirm_mdp_client" class="form-label">Confirmer votre mot de passe*</label>
+                <input type="password"
+                       class="form-control  <?= (isset($erreurs['confirm_mdp_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="confirm_mdp_client" name="confirm_mdp_client"
+                       value="<?= $confirm_mdp_client ?>"
+                       placeholder="Saisir à nouveau votre mot de passe"
+                       aria-describedby="emailHelp">
+                <?php if (isset($erreurs['confirm_mdp_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['confirm_mdp_client'] ?></p>
+                <?php endif; ?>
+            </div>
+            <p>* Champs obligatoires</p>
+            <div class="text-center">
+                <button type="submit" class="btn btn-light ">Valider</button>
+            </div>
+            <p class="mt-3">Vous possédez déjà un compte ? <a href="/connexion.php" class="text-dark">connectez-vous</a>
+            </p>
+        </form>
     </div>
-    <div class="mb-3">
-        <label for="confirm_mdp_client" class="form-label">Confirmer votre mot de passe*</label>
-        <input type="password"
-               class="form-control  <?= (isset($erreurs['confirm_mdp_client'])) ? "border border-2 border-danger" : "" ?>"
-               id="confirm_mdp_client" name="confirm_mdp_client"
-               value="<?= $confirm_mdp_client ?>"
-               placeholder="Saisir à nouveau votre mot de passe"
-               aria-describedby="emailHelp">
-        <?php if (isset($erreurs['confirm_mdp_client'])) : ?>
-            <p class="form-text text-danger"><?= $erreurs['confirm_mdp_client'] ?></p>
-        <?php endif; ?>
-    </div>
-    <p>* Champs obligatoires</p>
-    <div class="text-center">
-        <button type="submit" class="btn btn-light ">Valider</button>
-    </div>
-    <p class="mt-3">Vous possédez déjà un compte ? <a href="/connexion.php" class="text-dark">connectez-vous</a>
-    </p>
-    </form>
-</div>
 </div>
 </div>
 

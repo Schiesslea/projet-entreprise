@@ -1,3 +1,11 @@
+<?php
+session_start();
+$client = null;
+if (isset($_SESSION["client"])) {
+    $client = $_SESSION["client"];
+}
+
+?>
 <!doctype html>
 <html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>

@@ -24,11 +24,27 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php BASE_PROJET ?>/index.php#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php BASE_PROJET ?>/inscription.php">S'inscrire</a>
-                    </li>
-                    </a>
-                    </li>
+                    <?php if (empty($_SESSION)) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php BASE_PROJET ?>/inscription.php">S'inscrire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php BASE_PROJET ?>/connexion.php">Se connecter</a>
+                        </li>
+                    <?php else : ?>
+                        <div class="btn-group dropdown" role="group">
+                            <button type="button" class="btn btn-sm btn-primary  dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                <i class="bi bi-person-circle me-1 "></i><?= $client["pseudo_client"] ?>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-center">
+                                <li><a class="dropdown-item" href="<?php BASE_PROJET ?>/deconnexion.php"><i
+                                                class="bi bi-box-arrow-right me-1"></i>Déconnexion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    <?php endif ?>
                 </ul>
 
             </div>

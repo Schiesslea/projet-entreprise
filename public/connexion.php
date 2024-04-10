@@ -11,49 +11,49 @@ if (!empty($_SESSION)) {
 // Utilisation d'une variable superglobale $_SERVER
 // $_SERVER : tableau associatif contenant des informations sur la requête HTTP
 $erreurs = [];
-$email_utilisateur = "";
-$mdp_utilisateur = "";
+$email_client = "";
+$mdp_client = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Le formulaire a été soumis !
     // Traiter les données du formulaire
     // Récupérer les valeurs saisies par l'utilisateur
     // Superglobale $_POST : tableau associatif
-    $email_utilisateur = $_POST['email_utilisateur'];
-    $mdp_utilisateur = $_POST['mdp_utilisateur'];
+    $email_client = $_POST['email_client'];
+    $mdp_client = $_POST['mdp_client'];
     //Validation des données
-    if (empty($email_utilisateur)) {
-        $erreurs['email_utilisateur'] = "L'email est obligatoire";
-    } elseif (!filter_var($email_utilisateur, FILTER_VALIDATE_EMAIL)) {
-        $erreurs['email_utilisateur'] = "L'email n'est pas valide";
-        if (empty($mdp_utilisateur)) {
-            $erreurs['mdp_utilisateur'] = "Le mot de passe est obligatoire";
+    if (empty($email_client)) {
+        $erreurs['email_client'] = "L'email est obligatoire";
+    } elseif (!filter_var($email_client, FILTER_VALIDATE_EMAIL)) {
+        $erreurs['email_client'] = "L'email n'est pas valide";
+        if (empty($mdp_client)) {
+            $erreurs['mdp_client'] = "Le mot de passe est obligatoire";
         }
     }
 
 
-    $email_user = getUser($email_utilisateur);
-    $mdp = getMdp($email_utilisateur);
+    $email_user = getClient($email_client);
+    $mdp = getMdp($email_client);
     if ($email_user) {
         foreach ($email_user as $info_user) {
             foreach ($mdp as $mdp_user) {
-                if (password_verify($mdp_utilisateur, $mdp_user)) {
+                if (password_verify($mdp_client, $mdp_user)) {
                     session_start();
-                    $_SESSION["utilisateur"] = [
-                        "pseudo_utilisateur" => $info_user["pseudo_utilisateur"]
+                    $_SESSION["client"] = [
+                        "pseudo_client" => $info_user["pseudo_client"]
                     ];
                     header("Location: ../index.php");
                     exit();
                 } else {
-                    $erreurs['email_utilisateur'] = "identifiants incorrects";
-                    $erreurs['mdp_utilisateur'] = "identifiants incorrects";
+                    $erreurs['email_client'] = "identifiants incorrects";
+                    $erreurs['mdp_client'] = "identifiants incorrects";
                 }
             }
         }
 
     } else {
-        $erreurs['email_utilisateur'] = "identifiants incorrects";
-        $erreurs['mdp_utilisateur'] = "identifiants incorrects";
+        $erreurs['email_client'] = "identifiants incorrects";
+        $erreurs['mdp_client'] = "identifiants incorrects";
     }
 }
 
@@ -87,33 +87,34 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
     <div class="w-50 mx-auto shadow my-5 p-4 rounded" style="background-color: skyblue">
         <form action="" method="post" novalidate>
             <div class="mb-3">
-                <label for="email_utilisateur" class="form-label">Email*</label>
+                <label for="email_client" class="form-label">Email*</label>
                 <input type="email"
-                       class="form-control <?= (isset($erreurs['email_utilisateur'])) ? "border border-2 border-danger" : "" ?>"
-                       id="email_utilisateur"
-                       name="email_utilisateur" value="<?= ($erreurs) ? "" : $email_utilisateur ?>"
+                       class="form-control <?= (isset($erreurs['email_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="email_client"
+                       name="email_client" value="<?= ($erreurs) ? "" : $email_client ?>"
                        placeholder="Saisir votre email"
                        aria-describedby="emailHelp">
-                <?php if (isset($erreurs['email_utilisateur'])) : ?>
-                    <p class="form-text text-danger"><?= $erreurs['email_utilisateur'] ?></p>
+                <?php if (isset($erreurs['email_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['email_client'] ?></p>
                 <?php endif; ?>
             </div>
             <div class="mb-3">
-                <label for="mdp_utilisateur" class="form-label">Mot de passe*</label>
+                <label for="mdp_client" class="form-label">Mot de passe*</label>
                 <input type="password"
-                       class="form-control <?= (isset($erreurs['mdp_utilisateur'])) ? "border border-2 border-danger" : "" ?>"
-                       id="mdp_utilisateur" name="mdp_utilisateur"
-                       value="<?= (!empty($erreurs)) ? $mdp_utilisateur : "" ?>" placeholder="Saisir votre mot de passe"
+                       class="form-control <?= (isset($erreurs['mdp_client'])) ? "border border-2 border-danger" : "" ?>"
+                       id="mdp_client" name="mdp_client"
+                       value="<?= (!empty($erreurs)) ? $mdp_client : "" ?>" placeholder="Saisir votre mot de passe"
                        aria-describedby="emailHelp">
-                <?php if (isset($erreurs['mdp_utilisateur'])) : ?>
-                    <p class="form-text text-danger"><?= $erreurs['mdp_utilisateur'] ?></p>
+                <?php if (isset($erreurs['mdp_client'])) : ?>
+                    <p class="form-text text-danger"><?= $erreurs['mdp_client'] ?></p>
                 <?php endif; ?>
             </div>
             <p>* Champs obligatoires</p>
             <div class="text-center">
                 <button type="submit" class="btn btn-light ">Valider</button>
             </div>
-            <p class="mt-3">Vous ne possédez pas de compte ? <a href="/creation-compte.php" class="text-dark">inscrivez-vous</a>
+            <p class="mt-3">Vous ne possédez pas de compte ? <a href="/inscription.php"
+                                                                class="text-dark">inscrivez-vous</a>
             </p>
         </form>
     </div>

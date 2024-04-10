@@ -6,13 +6,17 @@
                 <div class="col-6 col-md-3 mb-3">
                     <h5>Redirection</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#presentation" class="nav-link p-0 text-muted"> <i
+                        <li class="nav-item mb-2"><a href="<?php BASE_PROJET ?>/index.php#presentation"
+                                                     class="nav-link p-0 text-muted"> <i
                                         class="bi bi-arrow-right-circle"></i>À propos</a></li>
-                        <li class="nav-item mb-2"><a href="#tarifs" class="nav-link p-0 text-muted"> <i
+                        <li class="nav-item mb-2"><a href="<?php BASE_PROJET ?>/index.php#tarifs"
+                                                     class="nav-link p-0 text-muted"> <i
                                         class="bi bi-arrow-right-circle"></i>Tarifs</a></li>
-                        <li class="nav-item mb-2"><a href="#contenu" class="nav-link p-0 text-muted"> <i
+                        <li class="nav-item mb-2"><a href="<?php BASE_PROJET ?>/index.php#contenu"
+                                                     class="nav-link p-0 text-muted"> <i
                                         class="bi bi-arrow-right-circle"></i>Fonctionnalité</a></li>
-                        <li class="nav-item mb-2"><a href="#Organigramme" class="nav-link p-0 text-muted"> <i
+                        <li class="nav-item mb-2"><a href="<?php BASE_PROJET ?>/index.php#Organigramme"
+                                                     class="nav-link p-0 text-muted"> <i
                                         class="bi bi-arrow-right-circle"></i>Organigramme</a></li>
                     </ul>
                 </div>
