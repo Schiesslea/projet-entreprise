@@ -90,6 +90,32 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
                                 <h4 class="card-title"><?= $produit["designation_prod"] ?></h4>
                                 <p class="card-text fs-3 "><?= $produit["prix_prod"] ?>€</p>
                                 <p class="fs-5 d-lg-block d-none"> <?= $produit["commentaire_prod"] ?></p>
+                                <a class="btn btn-light " <?php if (empty($_SESSION)) :
+                                    ?>
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"
+                                <?php endif; ?>
+                                   href="devis.php">Acheter</a>
+                                <?php if (empty($_SESSION)) :
+                                    ?>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                         aria-labelledby="exampleModalLabel"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Attention</h1>
+                                                    <button type="button" class="btn-close " data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Vous devez être connecté pour pouvoir acheter un abonnement</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
