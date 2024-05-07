@@ -1,5 +1,8 @@
 <?php
 
+require_once '../base.php';
+require_once BASE_PROJET . '/src/database/devis-db.php';
+require_once BASE_PROJET . '/src/database/produit-db.php';
 
 session_start();
 if (empty($_SESSION)) {
@@ -10,6 +13,7 @@ if (isset($_SESSION["client"])) {
     $client = $_SESSION["client"];
 }
 
+$produits = getProduit();
 
 // Déterminer si le formulaire a été soumis
 // Utilisation d'une variable superglobale $_SERVER
@@ -39,16 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     //Validation des données
     if (empty($nom)) {
-        $erreurs['nom'] = "Le titre est obligatoire";
+        $erreurs['nom'] = "Le nom est obligatoire";
     }
     if (empty($prenom)) {
-        $erreurs['prenom'] = "La durée est obligatoire";
+        $erreurs['prenom'] = "La prénom est obligatoire";
     }
     if (empty($telephone)) {
-        $erreurs['telephone'] = "Le résumé est obligatoire";
+        $erreurs['telephone'] = "Le numéro de téléphone est obligatoire";
     }
     if (empty($libelleRue)) {
-        $erreurs['libelle_rue'] = "La date de sortie est obligatoire";
+        $erreurs['libelle_rue'] = "Le lib est obligatoire";
     }
     if (empty($ville)) {
         $erreurs['ville'] = "Le pays est obligatoire";
@@ -63,10 +67,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Traiter les données
     if (empty($erreurs)) {
-        postDevis($nom, $prenom, $telephone, $libelleRue, $ville, $codePostal, $pays, $client["id_client"]);
-        // Rediriger l'utilisateur vers une autre page du site
-        header("Location: /index.php");
-        exit();
+        foreach ($produits as $produit) {
+            postDevis($client["id_client"], $produit["id_produit"], $nom, $prenom, $telephone, $libelleRue, $ville, $codePostal, $pays);
+            // Rediriger l'utilisateur vers une autre page du site
+            header("Location: /index.php");
+            exit();
+        }
+
+
     }
 }
 
@@ -123,7 +131,7 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
             </div>
             <div class="mb-3">
                 <label for="telephone" class="form-label">téléphone*</label>
-                <input type="text"
+                <input type="number"
                        class="form-control <?= (isset($erreurs['telephone'])) ? "border border-2 border-danger" : "" ?>"
                        id="telephone" name="telephone" value="<?= $telephone ?>"
                        placeholder="Saisir votre numéro de téléphone"
