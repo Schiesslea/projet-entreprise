@@ -18,4 +18,19 @@ function getProduit(): array
 
 }
 
+function getProduitParId(?int $id_prod): array|bool
+{
+    $pdo = getConnexion();
+// 2. Préparation de la requête
+    $requete = $pdo->prepare("SELECT * FROM produit WHERE id_prod = :id");
+
+// 3. Lier le paramètre
+    $requete->bindValue(':id', $id_prod);
+
+// 4. Exécution de la requête
+    $requete->execute();
+
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
 ?>

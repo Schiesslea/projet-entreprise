@@ -3,26 +3,54 @@
 require_once '../base.php';
 require_once BASE_PATH . '/src/config/db-config.php';
 
-function postDevis($id_client, $id_produit, $nom, $prenom, $telephone, $libelleRue, $ville, $codePostal, $pays): void
+
+function getDevis(): array
+{
+    $pdo = getConnexion();
+    $requete_email = $pdo->prepare("SELECT * FROM devis");
+    $requete_email->execute();
+    $client = $requete_email->fetchAll(PDO::FETCH_ASSOC);
+    return $client;
+}
+
+function postDevis($nom, $prenom, $telephone, $libelleRue, $ville, $codePostal, $pays, $date, $id_client, $id_prod): void
 {
     $pdo = getConnexion();
     // Traiter les données
     // Traitement des données (insertion dans une base de données)
-    $requete = $pdo->prepare(query: "INSERT INTO devis (id_client, id_produit, nom, prenom, telephone, libelleRue, ville, codePostal, pays) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $requete = $pdo->prepare(query: "INSERT INTO devis (nom, prenom, telephone, libelleRue, ville, codePostal, pays, date ,id_client, id_prod) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-    $requete->bindParam(1, $id_client);
-    $requete->bindParam(2, $id_produit);
-    $requete->bindParam(3, $nom);
-    $requete->bindParam(4, $prenom);
-    $requete->bindParam(5, $telephone);
-    $requete->bindParam(6, $libelleRue);
-    $requete->bindParam(7, $ville);
-    $requete->bindParam(8, $codePostal);
-    $requete->bindParam(9, $pays);
+
+    $requete->bindParam(1, $nom);
+    $requete->bindParam(2, $prenom);
+    $requete->bindParam(3, $telephone);
+    $requete->bindParam(4, $libelleRue);
+    $requete->bindParam(5, $ville);
+    $requete->bindParam(6, $codePostal);
+    $requete->bindParam(7, $pays);
+    $requete->bindParam(8, $date);
+    $requete->bindParam(9, $id_client);
+    $requete->bindParam(10, $id_prod);
 
     // 3. Exécution de la requête
     $requete->execute();
 
 }
+
+function getDevisUser(?int $id_client): array|bool
+{
+    $pdo = getConnexion();
+// 2. Préparation de la requête
+    $requete = $pdo->prepare("SELECT * FROM devis WHERE id_client = :id");
+
+// 3. Lier le paramètre
+    $requete->bindValue(':id', $id_client);
+
+// 4. Exécution de la requête
+    $requete->execute();
+
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
 
 ?>

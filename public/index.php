@@ -95,7 +95,7 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
                                     data-bs-toggle="modal"
                                     data-bs-target="#exampleModal"
                                 <?php endif; ?>
-                                   href="devis.php">Acheter</a>
+                                   href="formulaire-devis.php?id_prod=<?= $produit['id_prod'] ?>">Acheter</a>
                                 <?php if (empty($_SESSION)) :
                                     ?>
                                     <div class="modal fade" id="exampleModal" tabindex="-1"

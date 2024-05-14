@@ -43,36 +43,27 @@ $nbDevis = 0;
 require_once BASE_PROJET . '/src/_partials/menu.php';
 ?>
 <div class="container ">
-    <h1 class="   border-3 mb-5 mt-4" style="color: #86C232; border-bottom: solid ;border-bottom-color: #86C232">Liste
-        des devis</h1>
-    <!-- Votre code -->
-    <div class="row text-center " href="#home">
+    <div class="row align-middle">
+
+        <h1 class="col-9">Devis</h1>
+        <img src="assets/images/Schiesslé-Andy-SIO1-SLAM_logo-entreprise-removebg-preview.png"
+             class="float-end w-25 col-3  "
+             alt="">
+    </div>
+    <div class="row">
+        <p class="col-3 fw-bold">Vendeur</p>
+        <p class="col-3">MA VIDEO EDITOR </br>
+            37 rue de l'Etang </br>
+            70140 La Résie Saint Martin</p>
+    </div>
+    <div class="row">
+        <p class="col-3 fw-bold">Client</p>
         <?php foreach ($devis as $detail) : ?>
-            <?php if ($detail['id_client'] == $client['id_client']) : ?>
-                <?php $films = getDevisUser($client['id_client']); ?>
-                <?php $nbDevis = 1; ?>
-
-                <div class="card rounded-4  mb-4 me-2" style="max-width: 20rem ">
-                    <div class="card-body ">
-                        <h4 class="card-title">Référence du devis : <?= $detail['id_devis'] ?></h4>
-                        <p class="card-text fs-4 text-dark"><?= date("d/m/Y", strtotime($detail['date'])) ?></p>
-                        <p class="card-text fs-4 text-dark"><?php $produit = getProduitParId($detail['id_prod']);
-                            echo $produit['designation_prod'] ?></p>
-
-                        <p class="card-text">
-                            <a class="btn " style="background-color: #86C232 " role="button"
-                               href="detail-devis.php?id_devis=<?= $detail['id_devis'] ?>
-                        ">Détails du devis</a></p>
-
-                    </div>
-                </div>
-            <?php endif; ?>
+            /* problème ici car $devis récupère les 2 devis de la bdd, faut récupérer les infos que de celui qui nous intéresse, avec fonction je pense.
+            <p class="col-3"> <?= $detail['nom'] . $detail['prenom'] ?></br>
+                <?= $detail['libelleRue'] ?> </br>
+                <?= $detail['codePostal'] . $detail['ville'] ?></p>
         <?php endforeach; ?>
-
-        <?php if ($nbDevis == 0) : ?>
-            <p>Vous n'avez aucun devis</p>
-        <?php endif; ?>
-
     </div>
 </div>
 

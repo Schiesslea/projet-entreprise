@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if (password_verify($mdp_client, $mdp_user)) {
                     session_start();
                     $_SESSION["client"] = [
+                        "id_client" => $info_user["id_client"],
                         "pseudo_client" => $info_user["pseudo_client"]
                     ];
                     header("Location: ../index.php");
