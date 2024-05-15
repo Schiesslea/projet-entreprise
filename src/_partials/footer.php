@@ -1,5 +1,5 @@
 <!-- pied de page -->
-<footer class="bg-dark" id="contact">
+<footer class="bg-dark " id="contact">
     <div class="container-md">
         <footer class="py-5">
             <div class="row">

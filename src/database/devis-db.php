@@ -52,5 +52,20 @@ function getDevisUser(?int $id_client): array|bool
     return $requete->fetch(PDO::FETCH_ASSOC);
 }
 
+function getDevisParId(?int $id_devis): array|bool
+{
+    $pdo = getConnexion();
+// 2. Préparation de la requête
+    $requete = $pdo->prepare("SELECT * FROM devis WHERE id_devis = :id");
+
+// 3. Lier le paramètre
+    $requete->bindValue(':id', $id_devis);
+
+// 4. Exécution de la requête
+    $requete->execute();
+
+    return $requete->fetch(PDO::FETCH_ASSOC);
+}
+
 
 ?>

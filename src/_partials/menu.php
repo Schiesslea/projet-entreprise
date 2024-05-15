@@ -42,7 +42,7 @@
                                 <li><a class="dropdown-item" href="<?php BASE_PROJET ?>/deconnexion.php"><i
                                                 class="bi bi-box-arrow-right me-1"></i>Déconnexion</a>
                                 </li>
-                                <li><a class="dropdown-item" href="<?php BASE_PROJET ?>/devis.php"><i
+                                <li><a class="dropdown-item" href="<?php BASE_PROJET ?>/liste-devis.php"><i
                                                 class="bi bi-tags me-1"></i>Mes devis</a>
                                 </li>
                             </ul>

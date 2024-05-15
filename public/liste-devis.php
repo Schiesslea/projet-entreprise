@@ -49,7 +49,7 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
     <div class="row text-center " href="#home">
         <?php foreach ($devis as $detail) : ?>
             <?php if ($detail['id_client'] == $client['id_client']) : ?>
-                <?php $films = getDevisUser($client['id_client']); ?>
+                <?php $devis = getDevisUser($client['id_client']); ?>
                 <?php $nbDevis = 1; ?>
 
                 <div class="card rounded-4  mb-4 me-2" style="max-width: 20rem ">
