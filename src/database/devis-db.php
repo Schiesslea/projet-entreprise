@@ -7,7 +7,7 @@ require_once BASE_PATH . '/src/config/db-config.php';
 function getDevis(): array
 {
     $pdo = getConnexion();
-    $requete_email = $pdo->prepare("SELECT * FROM devis");
+    $requete_email = $pdo->prepare("SELECT * FROM devis ORDER BY date desc ");
     $requete_email->execute();
     $client = $requete_email->fetchAll(PDO::FETCH_ASSOC);
     return $client;

@@ -64,6 +64,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($codePostal)) {
         $erreurs['code_postal'] = "Le code postal est obligatoire";
     }
+    if (!intval($codePostal)) {
+        $erreurs['code_postal'] = "Le code postal n'est pas valide";
+
+    }
     if (empty($pays)) {
         $erreurs['pays'] = "Le pays est obligatoire";
     }
@@ -166,7 +170,7 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
             </div>
             <div class="mb-3">
                 <label for="code_postal" class="form-label">code postal*</label>
-                <input type="number"
+                <input type="text"
                        class="form-control <?= (isset($erreurs['code_postal'])) ? "border border-2 border-danger" : "" ?>"
                        id="code_postal" name="code_postal" value="<?= $codePostal ?>"
                        placeholder="Saisir le postal"

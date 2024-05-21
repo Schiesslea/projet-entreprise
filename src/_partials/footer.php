@@ -53,11 +53,11 @@
                     <h5>Contact</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2 text-muted"><i class="bi bi-telephone me-2"></i>06 43 21 33 38</li>
+                        <li class="nav-item mb-2 text-muted"><i class="bi bi-person-raised-hand me-2"></i>Posez nous une
+                            question à </a></li>
                         <li class="nav-item mb-2 text-muted"><a href="mailto:mavideoeditor@gmail.com"
                                                                 class="text-decoration-none text-muted "><i
                                         class="bi bi-envelope me-2"> mavideoeditor@gmail.com</i></a></li>
-                        <li class="nav-item mb-2 text-muted"><a href="formulaire.php" class="nav-link p-0 text-muted"><i
-                                        class="bi bi-person-raised-hand me-2"></i>Une question ?</a></li>
                     </ul>
                 </div>
                 <!-- réseau -->

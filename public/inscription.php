@@ -48,6 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($codepostal_client)) {
         $erreurs['codepostal_client'] = "Le code postal est obligatoire";
     }
+    if (!intval($codepostal_client)) {
+        $erreurs['codepostal_client'] = "Le code postal n'est pas valide";
+
+    }
     if (empty($email_client)) {
         $erreurs['email_client'] = "L'email est obligatoire";
     } elseif (!filter_var($email_client, FILTER_VALIDATE_EMAIL)) {
@@ -167,7 +171,7 @@ require_once BASE_PROJET . '/src/_partials/menu.php';
             </div>
             <div class="mb-3">
                 <label for="codepostal_client" class="form-label">Code Postal*</label>
-                <input type="number"
+                <input type="text"
                        class="form-control <?= (isset($erreurs['codepostal_client'])) ? "border border-2 border-danger" : "" ?>"
                        id="codepostal_client" name="codepostal_client" value="<?= $codepostal_client ?>"
                        placeholder="Saisir votre code postal"
